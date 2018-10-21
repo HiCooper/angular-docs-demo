@@ -1,0 +1,82 @@
+.doc-home {
+  min-height: 100vh;
+  .home-banner-img {
+    @media (min-width: 768px) {
+      padding-bottom: 13rem;
+    }
+    @media (min-width: 400px) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+    height: 100%;
+    background: url('../../assets/img/bg.svg') 0 0/cover no-repeat;
+    .content-center {
+      .ant-layout-header {
+        background-color: transparent;
+        display: flex;
+      }
+      .ant-layout, .ant-layout-footer {
+        background: transparent;
+        color: #ffffff;
+      }
+      @media (min-width: 400px) {
+        .section {
+          display: flex;
+        }
+
+        .section.left {
+          width: 16rem;
+        }
+
+        .section.middle {
+          flex: 1;
+          justify-content: flex-end;
+          padding: 0 20px;
+        }
+
+        .section.right {
+          width: 16rem;
+          justify-content: flex-end;
+          padding: 0 20px;
+        }
+      }
+      .main-start {
+        flex: 1;
+        padding-top: 4rem;
+        font-size: .75rem;
+        max-width: 30em;
+        h1 {
+          color: #fff;
+          font-size: 4em;
+          font-weight: 700;
+          margin-bottom: 0;
+          text-shadow: 0 12px 34px rgba(0, 60, 183, .25);
+        }
+        p {
+          font-size: 1.25em;
+          line-height: 2em;
+          padding-right: 2em;
+        }
+      }
+      @media (min-width: 768px) {
+        .main-start {
+          margin-top: 6rem;
+          font-size: .875rem;
+          h1 {
+            font-size: 6.875em;
+          }
+        }
+      }
+      @media (min-width: 400px) {
+        .main-start {
+          margin-top: 4rem;
+        }
+      }
+
+    }
+  }
+
+  .logo {
+    flex: 1 0 auto;
+  }
+}
