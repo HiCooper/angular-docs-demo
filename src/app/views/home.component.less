@@ -8,6 +8,8 @@
     margin-right: auto;
     display: flex;
     flex-wrap: wrap;
+    padding: 20px;
+    overflow: hidden;
   }
 
   .home-banner-img {
@@ -108,14 +110,14 @@
       flex: 1;
       font-size: .75rem;
       overflow: hidden;
-      @media (min-width: 376px) {
+      @media (min-width: 376) {
         padding: 0 1rem;
       }
       @media (min-width: 768px) {
         margin-top: 4px;
         padding: 0.4rem 3rem;
       }
-      @media (max-width: 990px) {
+      @media (max-width: 768px) {
         margin:  80px auto;
       }
 
@@ -133,7 +135,9 @@
       }
 
       .block-left {
+        width: calc(50% - 2.5rem);
         flex: 1;
+        float: left;
         @media(max-width: 414px){
           text-align: center;
         }
@@ -170,11 +174,13 @@
       }
 
       .block-right {
+        width: calc(50% - 2.5rem);
         flex: 1;
+        float: right;
+        @media (max-width: 990px) {
+          display: none;
+        }
         .shield {
-          @media (max-width: 990px) {
-            display: none;
-          }
           @media (min-width: 1400px) {
             height: 32.5rem;
             width: 32rem;
@@ -225,7 +231,7 @@
     }
 
     .concave {
-      margin-bottom: -5px;
+      margin-bottom: -6px;
     }
   }
 
