@@ -5,8 +5,7 @@ import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {AppComponent} from './app.component';
-
-import {registerLocaleData} from '@angular/common';
+import {HashLocationStrategy, LocationStrategy, registerLocaleData} from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import {CoreModule} from './@core/core.module';
 import {ThemeModule} from './@theme/theme.module';
@@ -28,7 +27,7 @@ registerLocaleData(zh);
         ThemeModule
     ],
     bootstrap: [AppComponent],
-    providers: []
+    providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}]
 })
 export class AppModule {
 }
